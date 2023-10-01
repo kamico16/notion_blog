@@ -11,6 +11,7 @@ export interface Props {
 const { post, enableLink = true } = Astro.props
 ---
 
+<div class="icon">🔖</div>
 <div class="post-tags">
   {
     post.Tags &&
@@ -46,5 +47,10 @@ const { post, enableLink = true } = Astro.props
     line-height: 1.2;
     color: rgb(50, 48, 44);
     background: rgba(227, 226, 224, 0.5);
+  }
+
+  .icon {
+    margin-right: 5px;
+    font-size: 1rem;
   }
 </style>

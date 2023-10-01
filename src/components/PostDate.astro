@@ -9,13 +9,19 @@ export interface Props {
 const { post } = Astro.props
 ---
 
+<div class="icon">🕒</div>
 <div class="post-date">
   {post.Date ? getDateStr(post.Date) : ''}
 </div>
 
 <style>
   .post-date {
-    padding: 0 0 0.3rem;
+    padding: 0 10px 0 0; /* 適切な値に調整 */
     font-size: 0.9rem;
+  }
+
+  .icon {
+    margin-right: 5px;
+    font-size: 1rem;
   }
 </style>
