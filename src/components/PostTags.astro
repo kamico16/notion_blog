@@ -11,22 +11,24 @@ export interface Props {
 const { post, enableLink = true } = Astro.props
 ---
 
-<div class="icon">🔖</div>
-<div class="post-tags">
-  {
-    post.Tags &&
-      post.Tags.length > 0 &&
-      post.Tags.map((tag: SelectProperty) => {
-        if (enableLink) {
-          return (
-            <a href={getTagLink(tag.name)} class={`tag ${tag.color}`}>
-              {tag.name}
-            </a>
-          )
-        }
-        return <span class={`tag ${tag.color}`}>{tag.name}</span>
-      })
-  }
+<div class="post-tag-container">
+  <div class="icon">🔖</div>
+  <div class="post-tags">
+    {
+     post.Tags &&
+        post.Tags.length > 0 &&
+        post.Tags.map((tag: SelectProperty) => {
+          if (enableLink) {
+            return (
+              <a href={getTagLink(tag.name)} class={`tag ${tag.color}`}>
+                {tag.name}
+              </a>
+            )
+          }
+          return <span class={`tag ${tag.color}`}>{tag.name}</span>
+        })
+    }
+  </div>
 </div>
 
 <style>
@@ -48,9 +50,13 @@ const { post, enableLink = true } = Astro.props
     color: rgb(50, 48, 44);
     background: rgba(227, 226, 224, 0.5);
   }
-
   .icon {
     margin-right: 5px;
     font-size: 1rem;
+  }
+  .post-tag-container {
+    display: flex;
+    align-items: center;
+    gap: 3px;
   }
 </style>

@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   schedule:
-    - cron: '5 23 * * 0' # 08:05(Mon) JST
+    - cron: '0 23 */2 * *' # 2日毎に実行
   workflow_dispatch:
 
 jobs:
