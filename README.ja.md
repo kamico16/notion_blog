@@ -16,7 +16,7 @@ astro-notion-blog を使えば [Notion](https://www.notion.so) で書けるブ�
 - :hammer_and_wrench: ブログの見た目を**自由にカスタマイズ可能**
 - :white_check_mark: **Notion 公式 API**を使っているため安心
 
-## :camera_flash: スクリーンショット
+## :camera_flash: スクリーンショット 
 
 ### PC
 
